@@ -1,1 +1,3 @@
 This is place for future info!
+
+Alright, here are some changes to commit.
