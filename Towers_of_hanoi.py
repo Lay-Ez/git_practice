@@ -19,15 +19,15 @@ stacks.append(right_stack)
 #   Set up the game
 while True:
     try:
-        num_disks = int(input("\nHow many disks do you want to play with?\n"))
+        num_disks = int(input("\n How many disks do you want to play with?\n "))
     except ValueError:
         print("\n Oops, looks like you didn't enter an integer number\n")
         continue
     while num_disks < 3:
         try:
-            num_disks = int(input("\nEnter a number greater than or equal to 3\n"))
+            num_disks = int(input("\n Enter a number greater than or equal to 3\n "))
         except ValueError:
-            print("Oops, looks like you didn't enter an integer number")
+            print("\n Oops, looks like you didn't enter an integer number")
             continue
     break
 
@@ -47,8 +47,8 @@ def get_input():
         for i in range(len(stacks)):
             name = stacks[i].get_name()
             letter = choices[i]
-            print("Enter {0} for {1}".format(letter, name))
-        user_input = input("").upper()
+            print(" Enter {0} for {1}".format(letter, name))
+        user_input = input(" ").upper()
         if user_input in choices:
             for i in range(len(stacks)):
                 if user_input == choices[i]:
@@ -77,4 +77,4 @@ while right_stack.get_size() != num_disks:
         else:
             print("\n\n  Invalid Move. Try Again")
 
-print("\n\n You completed the game in {0} moves, and the optimal number of moves was {1}".format(num_user_moves, num_optimal_moves))
+print("\n\n --- You completed the game in {0} moves, and the optimal number of moves was {1} ---".format(num_user_moves, num_optimal_moves))
