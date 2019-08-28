@@ -32,7 +32,7 @@ class Queue:
                 self.head = item_to_add
                 self.tail = item_to_add
             else:
-                self.head.set_next_node(item_to_add)
+                self.tail.set_next_node(item_to_add)
                 self.tail = item_to_add
             self.size += 1
         else:

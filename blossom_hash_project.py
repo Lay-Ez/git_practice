@@ -1,3 +1,4 @@
+
 from linked_list import Node, LinkedList
 from blossom_lib import flower_definitions
 
@@ -64,7 +65,7 @@ while True:
         user_input = str(input("\n Any other flower?\n (Enter options to see the options)\n"))
 
     if user_input == "opt":
-        user_input =  str(input("\n (Enter 'exit' to exit)\n (Enter 'add' to add flower to library)\n (Enter 'remove' to remove item)\n (Enter 'print' to see all items)\n (Enter 'cont' to continue viewing)\n"))
+        user_input =  str(input("\n (Enter 'exit' to exit)\n (Enter 'add' to add flower to library)\n (Enter 'remove' to remove flower)\n (Enter 'print' to see all items)\n (Enter 'cont' to continue viewing)\n"))
         if user_input == "exit":
             print("\n\n\n---Bye Bye!---\n")
             break
