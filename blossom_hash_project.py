@@ -72,6 +72,7 @@ while True:
             flower_to_add = str(input("\n What flower do you want to add?\n"))
             meaning_to_add = str(input("\n What's the meaning of that flower?\n"))
             blossom.assign(flower_to_add, meaning_to_add)
+            flower_definitions.append([flower_to_add, meaning_to_add])
             print("\n Added {} to collection\n".format(flower_to_add))
             continue
         if user_input == "remove":
