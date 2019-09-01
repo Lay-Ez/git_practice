@@ -62,7 +62,7 @@ elif blossom.retrieve(user_input) == None and user_input != "opt":
 
 while True:
     if user_input != "opt":
-        user_input = str(input("\n Any other flower?\n (Enter options to see the options)\n"))
+        user_input = str(input("\n Any other flower?\n (Enter 'opt' to see the options)\n"))
 
     if user_input == "opt":
         user_input =  str(input("\n (Enter 'exit' to exit)\n (Enter 'add' to add flower to library)\n (Enter 'remove' to remove flower)\n (Enter 'print' to see all items)\n (Enter 'cont' to continue viewing)\n"))
