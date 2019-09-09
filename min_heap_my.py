@@ -1,3 +1,4 @@
+from random import randint
 
 class MinHeap:
 
@@ -80,3 +81,13 @@ class MinHeap:
                 self.heap_list[smaller_child_idx] = parent
             idx = smaller_child_idx
         #print("Heap Restored! {}".format(self.heap_list))
+
+
+my_heap = MinHeap()
+
+for i in range(1, 100):
+    my_heap.add(randint(1, 100))
+
+while True:
+    user_input = input("")
+    my_heap.retrieve_min()
