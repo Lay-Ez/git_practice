@@ -1,5 +1,6 @@
 from graph import Graph
 from vertex import Vertex
+
 #first connected graph
 station_a = Vertex("a")
 station_b = Vertex("b")
