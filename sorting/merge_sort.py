@@ -1,5 +1,3 @@
-from random import randint
-
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -29,7 +27,3 @@ def merge(left, right):
     if right:
         result += right
     return result
-
-my_list = [randint(1, 100000) for i in range(100001)]
-
-print(merge_sort(my_list))
