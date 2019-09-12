@@ -2,7 +2,7 @@ import random
 
 
 def bubble_sort(arr, comparison_function):
-  swaps = 0
+  #swaps = 0
   sorted = False
   while not sorted:
     sorted = True
@@ -10,11 +10,15 @@ def bubble_sort(arr, comparison_function):
       if comparison_function(arr[idx], arr[idx + 1]):
         sorted = False
         arr[idx], arr[idx + 1] = arr[idx + 1], arr[idx]
-        swaps += 1
-  print("Bubble sort: There were {0} swaps".format(swaps))
+        #swaps += 1
+  #print("Bubble sort: There were {0} swaps".format(swaps))
   return arr
 
-def quicksort(list, start, end, comparison_function):
+
+
+def quicksort(list, comparison_function, start = 0, end = None):
+  if end == None:
+      end = len(list) - 1
   if start >= end:
     return
   pivot_idx = random.randrange(start, end + 1)
@@ -26,8 +30,8 @@ def quicksort(list, start, end, comparison_function):
       list[i], list[less_than_pointer] = list[less_than_pointer], list[i]
       less_than_pointer += 1
   list[end], list[less_than_pointer] = list[less_than_pointer], list[end]
-  quicksort(list, start, less_than_pointer - 1, comparison_function)
-  quicksort(list, less_than_pointer + 1, end, comparison_function)
+  quicksort(list, comparison_function, start, less_than_pointer - 1)
+  quicksort(list, comparison_function, less_than_pointer + 1, end)
 
 
 def merge_sort(arr, comparison_function):
@@ -42,8 +46,7 @@ def merge_sort(arr, comparison_function):
 
     return merge(left_sorted, right_sorted, comparison_function)
 
-
-
+# helper method for merge sort
 def merge(left, right, comparison_function):
     result = []
     while left and right:
@@ -59,3 +62,4 @@ def merge(left, right, comparison_function):
     if right:
         result += right
     return result
+# end of helper method for merge sort

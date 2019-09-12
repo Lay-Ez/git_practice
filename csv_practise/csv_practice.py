@@ -16,11 +16,7 @@ def by_total_length(book_a, book_b):
     return len(book_a['title_lower']) > len(book_b['title_lower'])
 
 
-sorted_by_merge = sorts.merge_sort(long_bookshelf, by_total_length)
+sorts.merge_sort(long_bookshelf, by_total_length)
 
-for book in sorted_merge:
-    print(book['title'])
-
-# sorts.quicksort(long_bookshelf, 0, len(long_bookshelf) - 1, by_total_length)
-# for book in long_bookshelf:
-#      print(book['title'])
+for book in long_bookshelf:
+    print("{} by {}".format(book['title'], book['author']))
