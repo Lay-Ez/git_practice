@@ -74,11 +74,18 @@ while True:
             meaning_to_add = str(input("\n What's the meaning of that flower?\n"))
             blossom.assign(flower_to_add, meaning_to_add)
             flower_definitions.append([flower_to_add, meaning_to_add])
+            with open('blossom_lib.py', 'w') as library:
+                library.write(flower_definitions)
             print("\n Added {} to collection\n".format(flower_to_add))
             continue
         if user_input == "remove":
             item_to_remove = str(input("\n What flower do you want to remove?\n"))
             blossom.remove(item_to_remove)
+            for item in flower_definitions:
+                if item[0] == item_to_remove:
+                    del item
+            with open('blossom_lib.py', 'w') as library:
+                library.write(str(flower_definitions))                
             print("\n  {} removed from collection\n".format(item_to_remove))
             continue
         if user_input == "print":
